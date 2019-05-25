@@ -2,9 +2,10 @@
   "name": "nexx-garage-sdk",
   "version": "1.0.1",
   "description": "",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
     "test": "mocha --require ts-node/register test/**/*.ts",
     "test:watch": "mocha --require ts-node/register test/**/*.test.ts --watch --watch-extensions ts --resolveJsonModule"
   },
