@@ -15,8 +15,8 @@ import { NexxApiClient } from 'nexx-garage-sdk';
 const client = new NexxApiClient({
   "password": "your_password",
   "username": "your_username",
-  "clientId": client_id, // see instructions <a href="#">here</a>
-  "deviceToken": device_token, // see instructions <a href="#">here</a>
+  "clientId": client_id, // see instructions below
+  "deviceToken": device_token, // see instructions below
 });
 
 // get array of all devices
