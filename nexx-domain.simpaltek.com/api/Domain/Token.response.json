@@ -1,0 +1,11 @@
+{
+	"access_token": "this_gives_you_access",
+	"token_type": "bearer",
+	"expires_in": 2591999,
+	"refresh_token": "the_refresh_token",
+	"client_id": "the_client_id",
+	"userName": "Username",
+	"userFullName": "Full Name",
+	".issued": "Wed, 15 May 2019 00:16:38 GMT",
+	".expires": "Fri, 14 Jun 2019 00:16:38 GMT"
+}

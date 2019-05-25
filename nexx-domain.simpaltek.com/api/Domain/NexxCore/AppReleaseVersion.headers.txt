@@ -1,0 +1,11 @@
+	POST /api/Domain/NexxCore/AppReleaseVersion HTTP/1.1
+Host	nexx-domain.simpaltek.com
+Content-Type	application/json
+Accept	*/*
+DeviceType	iPhone
+Connection	keep-alive
+Content-Length	33
+User-Agent	NexxHome/1.12 (com.simpaltek.nexxhome; build:8; iOS 12.2.0) Alamofire/4.7.3
+Accept-Language	en-US;q=1.0, ja-JP;q=0.9
+Authorization	bearer 7EahrjZcrJFsiHjGRFVcpILvGeyrh664reSeG7McuiBRc8VMEjzUBFFI91CFa-pgZ_BpExIhSxFIVQuSddsJDLp64W7jTzXwUuX21Kp3YJ5jQDbt3BwcVrMqM3Z9Nv2aK4VCY31sKs5io5f-GvMqfFJLjKNRy1oq64jAGFV0OtFdfve1aBB8AQurGJiLHpongh1Oseiu7jQfRI2Ifxsi-XEPY790Ywl9gYbR6USZGqbQ9Lgzw2p1dV6TUcwDFzccPgr0N8wrrucY6SCtia6TS1wiSxDtgT6WN5EdkNizeyLB8X0dmgzzRxJF4LCfgjkhnCfY10qX9ld1gNRVE17eENBMmcPEg5mHqAzLPgOoWjljdNOl4BA15wkfw09ZcG0VI_8DOdBBlRq0Fgsp_nEAuBhnjOvy95pt6xj_86haHvLtPOmr0jBWTCE5SMGgopQdfppFEmZ8EOaBVKy6esNZ__UluFA
+Accept-Encoding	gzip;q=1.0, compress;q=0.5

@@ -1,0 +1,20 @@
+{
+  "StatusCode": 200,
+  "Status": 0,
+  "Result": {
+    "FirstName": "Tamica",
+    "LastName": "Testeroni",
+    "MiddleName": null,
+    "CellPhone": null,
+    "Email": "TamicaTesteroni@gmail.com",
+    "IsOwner": true,
+    "AccountId": "90cc489420ec947e53e54e50f147ede3",
+    "TimeZone": 4,
+    "TimeZoneName": "Eastern Standard Time",
+    "GoogleTimeZoneName": "EST5EDT,M3.2.0,M11.1.0",
+    "PostalCode": "28205",
+    "ActionUserId": "90cc449250ec947e53e048e5f147ede3",
+    "Model": null
+  },
+  "Message": "OK"
+}

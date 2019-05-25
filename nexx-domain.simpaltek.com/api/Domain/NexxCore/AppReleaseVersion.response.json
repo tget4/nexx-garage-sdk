@@ -1,0 +1,15 @@
+{
+  "StatusCode": 200,
+  "Status": 0,
+  "Result": [
+    {
+      "OSName": "iOS",
+      "PreviousRelease": "1.8.4",
+      "LatestRelease": "1.12",
+      "ReleaseDate": "2019-03-02T15:09:42.914734",
+      "Description": "stable release",
+      "Model": null
+    }
+  ],
+  "Message": "OK"
+}

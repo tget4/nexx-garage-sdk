@@ -1,0 +1,10 @@
+GET /api/Domain/NexxCore/AppScreen HTTP/1.1
+Host	nexx-domain.simpaltek.com
+Content-Type	application/x-www-form-urlencoded
+Connection	keep-alive
+DeviceType	iPhone
+Accept	*/*
+User-Agent	NexxHome/1.12 (com.simpaltek.nexxhome; build:8; iOS 12.2.0) Alamofire/4.7.3
+Accept-Language	en-US;q=1.0, ja-JP;q=0.9
+Authorization	bearer long_token
+Accept-Encoding	gzip;q=1.0, compress;q=0.5

@@ -1,0 +1,5 @@
+Password=SecretPassword
+&Username=Username
+&client_id=the_client_id
+&device_token=the_device_token
+&grant_type=password
