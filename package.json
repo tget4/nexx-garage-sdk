@@ -1,8 +1,12 @@
 {
   "name": "nexx-garage-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
-  "keywords": ["nexx", "garage", "nexxgarage"],
+  "keywords": [
+    "nexx",
+    "garage",
+    "nexxgarage"
+  ],
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
