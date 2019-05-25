@@ -2,6 +2,7 @@
   "name": "nexx-garage-sdk",
   "version": "1.0.2",
   "description": "",
+  "keywords": ["nexx", "garage", "nexxgarage"],
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -25,5 +26,8 @@
   "dependencies": {
     "@types/request": "^2.48.1",
     "request": "^2.88.0"
+  },
+  "repository": {
+    "url": "https://github.com/tget4/nexx-garage-sdk"
   }
 }
