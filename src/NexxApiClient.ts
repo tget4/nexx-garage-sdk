@@ -2,6 +2,7 @@ import request from 'request';
 import Constants from './constants';
 
 const DEFAULT_USER_AGENT = 'NexxHome/1.12 (com.simpaltek.nexxhome; build:8; iOS 12.2.0) Alamofire/4.7.3';
+const DEFAULT_GRANT_TYPE = 'password';
 
 interface NexxApiClientConfig {
   username?: string;
@@ -48,6 +49,9 @@ export default class NexxApiClient {
     this.config = config;
     if (!this.config.userAgent) {
       this.config.userAgent = DEFAULT_USER_AGENT;
+    }
+    if (!this.config.grantType) {
+      this.config.grantType = DEFAULT_GRANT_TYPE;
     }
   }
 
