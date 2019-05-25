@@ -114,10 +114,7 @@ export default class NexxApiClient {
 
     try {
       const result = await this.makeRequest('GET', Constants.UserRegisteredDevice);
-      this.devices = result.Result.reduce((acc: any, value: any) => {
-        acc[value.DeviceId] = value;
-        return acc;
-      }, {});
+      this.devices = result.Result;
       return this.devices;
     } catch (e) {
       this.log({ error: e });

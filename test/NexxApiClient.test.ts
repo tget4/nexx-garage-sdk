@@ -29,15 +29,10 @@ describe('generateToken', () => {
   });
   it('should get the devices', async () => {
     const devices: any = await client.getDevices();
-    expect(Object.keys(devices).length).to.eql(1);
+    expect(devices.length).to.eql(1);
   });
   it('should open a device', async () => {
     const status: any = await client.open('df38432b971a350aef4f39e91432b97da845050');
     expect(status && status.StatusCode).to.eql(200);
-  });
-  it('should work', async () => {
-    const c = new NexxApiClient(config);
-
-    const devices = await c.open('df38432b971a350aef4f39e91432b97da845050');
   });
 });
