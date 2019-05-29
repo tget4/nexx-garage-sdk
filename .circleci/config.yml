@@ -55,6 +55,9 @@ workflows:
   nexx:
     jobs:
       - install
+      - build:
+          requires:
+            - install
       - test:
           requires:
             - install
@@ -63,5 +66,5 @@ workflows:
             - install
             - test
           filters:
-            only: master
-
+            branches:
+              only: master
