@@ -1,44 +1,59 @@
 version: 2
+
+references:
+  container_config: &container_config
+    docker:
+      - image: circleci/node:11
+    working_directory: ~/node
+  restore_dep_cache: &restore_dep_cache
+    restore_cache:
+      key: nexx-sdk-deps-{{ checksum "package-lock.json" }}
+
 jobs:
   install:
-    docker:
-      - image: circleci/node:10
+    <<: *container_config
     steps:
       - checkout
-      - run: npm ci
-  build:
-    docker:
-      - image: circleci/node:10
-    steps:
-      - checkout
-      - run: npm run build
+      - *restore_dep_cache
+      - run:
+          name: Install Dependencies
+          command: '[[ -d node_modules ]] || npm install'
+      - save_cache:
+          key: nexx-sdk-deps-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
   test:
-    docker:
-      - image: circleci/node:10
+    <<: *container_config
     steps:
       - checkout
-      - run: npm run test
-  publish:
-    docker:
-      - image: circleci/node:10
+      # Download and cache dependencies
+      - restore_cache:
+          key: nexx-sdk-deps-{{ checksum "package-lock.json" }}
+      # run tests!
+      - run: yarn test
+  pubish:
+    <<: *container_config
     steps:
       - checkout
-      - run: npm run test
+      - setup_remote_docker
+      # Download and cache dependencies
+      - restore_cache:
+          key: nexx-sdk-deps-{{ checksum "package.json" }}
+      # run the build!
+      - run: yarn publish
+          
 workflows:
   version: 2
-  build_and_test:
+  default-workflow:
     jobs:
       - install
       - test:
           requires:
             - install
       - build:
+          context: tide
           requires:
             - install
-      - publish:
-          requires:
-            - build
             - test
           filters:
             only: master
-      
