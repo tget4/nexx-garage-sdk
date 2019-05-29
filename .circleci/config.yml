@@ -30,8 +30,17 @@ jobs:
       - restore_cache:
           key: nexx-sdk-deps-{{ checksum "package-lock.json" }}
       # run tests!
-      - run: yarn test
-  pubish:
+      - run: npm test
+  build:
+    <<: *container_config
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          key: nexx-sdk-deps-{{ checksum "package-lock.json" }}
+      # run tests!
+      - run: npm run build
+  publish:
     <<: *container_config
     steps:
       - checkout
@@ -39,19 +48,23 @@ jobs:
       - restore_cache:
           key: nexx-sdk-deps-{{ checksum "package.json" }}
       # run the build!
-      - run: yarn publish
+      - run: npm publish
           
 workflows:
   version: 2
-  default-workflow:
+  nexx:
     jobs:
       - install
+      - build:
+          requires:
+            - install
       - test:
           requires:
             - install
-      - build:
+      - publish:
           requires:
             - install
             - test
           filters:
-            only: master
+            branches:
+              only: master
