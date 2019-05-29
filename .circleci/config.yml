@@ -35,7 +35,6 @@ jobs:
     <<: *container_config
     steps:
       - checkout
-      - setup_remote_docker
       # Download and cache dependencies
       - restore_cache:
           key: nexx-sdk-deps-{{ checksum "package.json" }}
@@ -51,7 +50,6 @@ workflows:
           requires:
             - install
       - build:
-          context: tide
           requires:
             - install
             - test
