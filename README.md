@@ -2,7 +2,7 @@
 
 This is a javascript sdk for interacting with Nexx Garage API's.
 
-*Nexx Garage not provide an official API. The results of this project are merely from reverse engineering. This project does not have any official relationship or support by https://getnexx.com/. Use it at your own risk.*
+*Nexx Garage does not provide an official API. The results of this project are merely from reverse engineering. This project does not have any official relationship or support by https://getnexx.com/. Use it at your own risk.*
 
 Nexx Garage Official Site: https://getnexx.com/
 
@@ -35,6 +35,6 @@ const result = await client.open(firstDevice.DeviceId);
 You will need to use an HTTP Proxy like https://www.charlesproxy.com/ to find your
 `client_id` and `device_token`. Follow the instructions [here](https://www.charlesproxy.com/documentation/using-charles/ssl-certificates/) for whatever device you are using.
 
-When you log in, there is a POST request ot identity-api.simpaltek.com/token. This will have the `client_id` and `device_token` in the request body.
+When you log in, there is a POST request to identity-api.simpaltek.com/token. This will have the `client_id` and `device_token` in the request body.
 
 
