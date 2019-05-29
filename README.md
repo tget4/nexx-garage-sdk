@@ -2,6 +2,10 @@
 
 This is a javascript sdk for interacting with Nexx Garage API's.
 
+*Nexx Garage not provide an official API. The results of this project are merely from reverse engineering. This project does not have any official relationship or support by https://getnexx.com/. Use it at your own risk.*
+
+Nexx Garage Official Site: https://getnexx.com/
+
 ## Usage:
 
 ```

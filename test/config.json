@@ -1,0 +1,7 @@
+{
+  "password": "password",
+  "username": "username",
+  "clientId": "client_id",
+  "deviceToken": "device_token",
+  "grantType": "password"
+}
