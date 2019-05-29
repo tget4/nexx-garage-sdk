@@ -47,7 +47,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           key: nexx-sdk-deps-{{ checksum "package-lock.json" }}
-      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+      - run: echo "//registry.npmjs.org/:_authToken=}${NPM_TOKEN} > .npmrc
       # run the build!
       - run: npm publish
           
@@ -63,6 +63,7 @@ workflows:
           requires:
             - install
       - publish:
+          context: npm
           requires:
             - install
             - test
