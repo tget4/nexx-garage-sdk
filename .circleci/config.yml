@@ -46,7 +46,7 @@ jobs:
       - checkout
       # Download and cache dependencies
       - restore_cache:
-          key: nexx-sdk-deps-{{ checksum "package.json" }}
+          key: nexx-sdk-deps-{{ checksum "package-lock.json" }}
       # run the build!
       - run: npm publish
           
