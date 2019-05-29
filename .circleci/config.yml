@@ -31,7 +31,7 @@ jobs:
           key: nexx-sdk-deps-{{ checksum "package-lock.json" }}
       # run tests!
       - run: yarn test
-  pubish:
+  publish:
     <<: *container_config
     steps:
       - checkout
@@ -49,9 +49,10 @@ workflows:
       - test:
           requires:
             - install
-      - build:
+      - publish:
           requires:
             - install
             - test
           filters:
             only: master
+
