@@ -42,13 +42,12 @@ jobs:
       - run: npm run build
   publish:
     <<: *container_config
-    environment:
-      NPM_TOKEN: ${NPM_TOKEN}
     steps:
       - checkout
       # Download and cache dependencies
       - restore_cache:
           key: nexx-sdk-deps-{{ checksum "package-lock.json" }}
+      - run: echo ${NPM_TOKEN}
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
       # run the build!
       - run: npm publish
