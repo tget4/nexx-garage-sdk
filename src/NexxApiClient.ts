@@ -127,6 +127,26 @@ export default class NexxApiClient {
   }
 
   /**
+   * get device state
+   *
+   * @return Promise<Device>
+   */
+  public async getDeviceState(deviceId: string): Promise<object> {
+    this.log({ payload: 'getDeviceState' });
+
+    try {
+      return await this.makeRequest(
+        'POST',
+        Constants.DeviceState,
+        {postType: 'GET', DeviceId: deviceId},
+      );
+    } catch (e) {
+      this.log({ error: e});
+      return null;
+    }
+  }
+
+  /**
    * Generate the token
    * @return Promise<object>
    */
