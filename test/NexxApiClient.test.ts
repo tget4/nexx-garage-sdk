@@ -4,6 +4,7 @@ import NexxApiClient from '../src/NexxApiClient';
 // tslint:disable-next-line:max-line-length
 import userRegisteredDeviceResponse from './../nexx-domain.simpaltek.com/api/Domain/NexxCore/UserRegisteredDevice.response.json';
 import activateDeviceResponse from './../nexx-domain.simpaltek.com/api/Domain/NexxGarage/ActivateDevice.response.json';
+import deviceStateResponse from './../nexx-domain.simpaltek.com/api/Domain/NexxGarage/DeviceState.response.json';
 import tokenResponse from './../nexx-domain.simpaltek.com/api/Domain/Token.response.json';
 import config from './config.json';
 import Constants from './../src/constants';
@@ -22,6 +23,9 @@ describe('generateToken', () => {
     nock(Constants.ActivateDevice)
       .post('')
       .reply(200, activateDeviceResponse);
+    nock(Constants.DeviceState)
+      .post('')
+      .reply(200, deviceStateResponse);
   });
   it('should create the token', async () => {
     await client.generateToken();
@@ -34,5 +38,9 @@ describe('generateToken', () => {
   it('should open a device', async () => {
     const status: any = await client.open('df38432b971a350aef4f39e91432b97da845050');
     expect(status && status.StatusCode).to.eql(200);
+  });
+  it('should get device state', async () => {
+    const device: any = await client.getDeviceState('df38432b971a350aef4f39e91432b97da845050');
+    expect(device && device.StatusCode).to.eql(200);
   });
 });
