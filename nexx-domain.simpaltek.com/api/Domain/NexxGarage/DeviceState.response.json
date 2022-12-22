@@ -1,0 +1,59 @@
+{
+  "StatusCode": 200,
+  "Status": 0,
+  "Result": {
+    "DeviceId": "df3aa0097f332b97da8432b97da845050",
+    "DeviceStatus": 1,
+    "DeviceStatusName": "Last Updated By",
+    "LastOperationTimestamp": "2022-12-18T22:09:42.74877",
+    "IsOnline": true,
+    "SharingOpenNotifyAllowed": true,
+    "SharingCloseNotifyAllowed": true,
+    "SharingOpenReminderAllowed": true,
+    "TemperatureColorIndicator": null,
+    "COColorIndicator": null,
+    "AccessoryDetails": null,
+    "TemperatureSetting": {
+      "Good": {
+        "from": 32.0,
+        "to": 90.0
+      },
+      "Attention": [
+        {
+          "from": 21.0,
+          "to": 31.0
+        },
+        {
+          "from": 91.0,
+          "to": 109.0
+        }
+      ],
+      "Warning": {
+        "below": 20.0,
+        "above": 110.0
+      },
+      "PreferredUnit": "F"
+    },
+    "COSetting": {
+      "Good": {
+        "below": 35.0,
+        "above": 0.0
+      },
+      "Attention": {
+        "from": 36.0,
+        "to": 149.0
+      },
+      "Warning": {
+        "below": 0.0,
+        "above": 150.0
+      }
+    },
+    "ProductCode": "NXG-200",
+    "DeviceNickName": "Garage",
+    "IsWirelessSensorLowBattery": null,
+    "GestureActionType": 20,
+    "Model": null,
+    "ActivityTimeStamp": "12/18/2022 02:09 PM"
+  },
+  "Message": "Device status is currently open"
+}
